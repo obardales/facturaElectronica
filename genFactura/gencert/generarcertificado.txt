@@ -1,0 +1,22 @@
+
+1: instalar Win32OpenSSL_Light-1_0_2g.exe
+
+cd C:\OpenSSL-Win64\bin
+
+set OPENSSL_CONF=c:\OpenSSL-Win64\bin\openssl.cfg   	
+
+2
+
+openssl pkcs12 -in d:/certifica/cofacopfx/archivo.pfx -out d:/certifica/cofacopem/cert.pem
+
+
+3:
+openssl pkcs12 -export -in d:/certifica/cofacopem/cert.pem -out d:/certifica/cofacop12/cert.p12 -name MiCertificado
+ingresar la nuava clave anterior "clave" o (123456)
+
+4:
+--cd D:\libre\Java\jdk1.8.0_101\bin
+cd C:\Program Files (x86)\Java\jre1.8.0_25\bin
+
+5:
+keytool -importkeystore -deststorepass clave -destkeypass clave -destkeystore d:/certifica/cofacojks/MiAlmacen.jks -srckeystore d:/certifica/cofacop12/cert.p12 -srcstoretype PKCS12 -srcstorepass clave -alias MiCertificado
