@@ -300,7 +300,7 @@ public class BolElectronica {
 
             Element CustomerAssignedAccountID1 = doc.createElementNS("", "cbc:CustomerAssignedAccountID");
             AccountingCustomerParty.appendChild(CustomerAssignedAccountID1);//se anade al grupo AccountingCustomerParty
-            CustomerAssignedAccountID1.appendChild(doc.createTextNode("42368768"));
+            CustomerAssignedAccountID1.appendChild(doc.createTextNode("12345678"));
 
             Element AdditionalAccountID1 = doc.createElementNS("", "cbc:AdditionalAccountID");
             AccountingCustomerParty.appendChild(AdditionalAccountID1);//se anade al grupo AccountingCustomerParty
@@ -315,7 +315,7 @@ public class BolElectronica {
             PartyLegalEntity1.appendChild(doc.createTextNode("\n"));
             Element RegistrationName1 = doc.createElementNS("", "cbc:RegistrationName");
             PartyLegalEntity1.appendChild(RegistrationName1);//se anade al grupo PartyLegalEntity1
-            cdata = doc.createCDATASection("MIGUEL TORREJON");
+            cdata = doc.createCDATASection("JOSE MANUEL ODRIA");
             RegistrationName1.appendChild(cdata);
             
 //bloque 5
