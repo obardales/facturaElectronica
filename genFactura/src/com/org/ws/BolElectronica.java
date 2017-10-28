@@ -164,11 +164,11 @@ public class BolElectronica {
 
             Element ID5 = doc.createElementNS("", "cbc:ID");
             envelope.appendChild(ID5);
-            ID5.appendChild(doc.createTextNode("B001-88"));
+            ID5.appendChild(doc.createTextNode("B001-1"));
 
             Element IssueDate = doc.createElementNS("", "cbc:IssueDate");
             envelope.appendChild(IssueDate);
-            IssueDate.appendChild(doc.createTextNode("2017-08-27"));
+            IssueDate.appendChild(doc.createTextNode("2017-10-15"));
 
             Element InvoiceTypeCode = doc.createElementNS("", "cbc:InvoiceTypeCode");
             envelope.appendChild(InvoiceTypeCode);
