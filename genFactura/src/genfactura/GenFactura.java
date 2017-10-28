@@ -5,7 +5,11 @@
  */
 package genfactura;
 
+import com.org.model.beans.DocumentoCabBean;
+import com.org.model.beans.DocumentodetBean;
+import com.org.model.beans.Leyenda;
 import com.org.ws.BolElectronica;
+import java.util.List;
 
 /**
  *
@@ -17,7 +21,10 @@ public class GenFactura {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        BolElectronica.generarXMLZipiadoBoleta();
+        DocumentoCabBean items = null;
+        List<DocumentodetBean> detdocelec = null;
+        List<Leyenda> leyendas = null;
+        String generarXMLZipiadoBoleta = BolElectronica.generarXMLZipiadoBoleta(items, detdocelec, leyendas);
     }
     
 }
