@@ -5,7 +5,6 @@
  */
 package com.org.util;
 
-import com.org.factories.Util;
 import java.util.Set;
 import javax.xml.soap.SOAPElement;
 import javax.xml.soap.SOAPEnvelope;
