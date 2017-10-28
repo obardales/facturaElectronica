@@ -37,11 +37,11 @@ public class HeaderHandler implements SOAPHandler<SOAPMessageContext> {
                 SOAPElement username = usernameToken.addChildElement("Username", "wsse");
 
                 //username.addTextNode("20550948029MODDATOS");
-                username.addTextNode(Util.getPropertyValue("soapUser",vruc));
+                username.addTextNode("20601491193MODDATOS");
 
                 SOAPElement password = usernameToken.addChildElement("Password", "wsse");
                 //password.setAttribute("Type", "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText");
-                password.addTextNode(Util.getPropertyValue("soapPass",vruc));
+                password.addTextNode("moddatos");
 
             } catch (Exception e) {
                 e.printStackTrace();
