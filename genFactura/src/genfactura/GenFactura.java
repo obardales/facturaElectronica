@@ -24,7 +24,7 @@ public class GenFactura {
         DocumentoCabBean items = null;
         List<DocumentodetBean> detdocelec = null;
         List<Leyenda> leyendas = null;
-        String generarXMLZipiadoBoleta = BolElectronica.generarXMLZipiadoBoleta(items, detdocelec, leyendas);
+        BolElectronica.generarXMLZipiadoBoleta(items, detdocelec, leyendas);
     }
     
 }

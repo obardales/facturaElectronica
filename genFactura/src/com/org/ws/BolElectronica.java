@@ -127,7 +127,7 @@ public class BolElectronica {
 //            javax.activation.FileDataSource fileDataSource = new javax.activation.FileDataSource(path + zipFileName);
 //            javax.activation.DataHandler dataHandler = new javax.activation.DataHandler(fileDataSource);
             //================Grabando la respuesta de sunat en archivo ZIP solo si es nulo
-            String pathRecepcion = Util.getPathZipFilesRecepcion(vruc);
+            String pathRecepcion = "d:\\libre\\";
             FileOutputStream fos = new FileOutputStream(pathRecepcion + "R-" + zipFileName);
             fos.write(respuestaSunat);
             fos.close();
@@ -653,7 +653,7 @@ public class BolElectronica {
 
                     Element PriceTypeCode02 = doc.createElementNS("", "cbc:PriceTypeCode");
                     AlternativeConditionPrice02.appendChild(PriceTypeCode02);//se anade al grupo AlternativeConditionPrice
-                    PriceTypeCode02.appendChild(doc.createTextNode("02")); //==>Para los casos de gatuito venta no Honerosa
+                    PriceTypeCode02.appendChild(doc.createTextNode("02")); //==>Para los casos de gatuito venta no Onerosa
                 }
 
 //
