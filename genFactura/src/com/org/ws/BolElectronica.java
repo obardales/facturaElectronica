@@ -51,7 +51,7 @@ public class BolElectronica {
             //String nrodoc = iddocument;//"943317";// request.getParameter("nrodoc");
             log.info("generarXMLZipiadoBoleta - Extraemos datos para preparar XML ");
              unidadEnvio = "d:\\libre\\";
-            log.info("generarXMLZipiadoBoleta - Ruita de directorios " + unidadEnvio);
+            log.info("generarXMLZipiadoBoleta - Ruta de directorios " + unidadEnvio);
             log.info("generarXMLZipiadoBoleta - Iniciamos cabecera ");
             //crear el Xml firmado
             if (items != null) {
@@ -179,12 +179,13 @@ public class BolElectronica {
         try {
             ElementProxy.setDefaultPrefix(Constants.SignatureSpecNS, "ds");
             //Parametros del keystore
-            String keystoreType = Util.getPropertyValue("keystoreType", items.getEmpr_nroruc());//"JKS";
-            String keystoreFile = Util.getPropertyValue("keystoreFile", items.getEmpr_nroruc());
-            String keystorePass = Util.getPropertyValue("keystorePass", items.getEmpr_nroruc());
-            String privateKeyAlias = Util.getPropertyValue("privateKeyAlias", items.getEmpr_nroruc());
-            String privateKeyPass = Util.getPropertyValue("privateKeyPass", items.getEmpr_nroruc());
-            String certificateAlias = Util.getPropertyValue("certificateAlias", items.getEmpr_nroruc());
+           
+            String keystoreType = "JKS";
+            String keystoreFile = "d:\\libre\\MiAlmacen.jks";
+            String keystorePass = "miAlmacen";
+            String privateKeyAlias = "miAlmacen";
+            String privateKeyPass = "miAlmacen";
+            String certificateAlias = "miAlmacen";            
             log.info("generarXMLZipiadoBoleta - Lectura de cerificado ");
             CDATASection cdata;
             log.info("generarXMLZipiadoBoleta - Iniciamos la generacion del XML");
