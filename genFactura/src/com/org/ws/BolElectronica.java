@@ -50,7 +50,7 @@ public class BolElectronica {
         try {
             //String nrodoc = iddocument;//"943317";// request.getParameter("nrodoc");
             log.info("generarXMLZipiadoBoleta - Extraemos datos para preparar XML ");
-             unidadEnvio = "d:\\libre\\";
+             unidadEnvio = "d:\\envio\\";
             log.info("generarXMLZipiadoBoleta - Ruta de directorios " + unidadEnvio);
             log.info("generarXMLZipiadoBoleta - Iniciamos cabecera ");
             //crear el Xml firmado
@@ -127,7 +127,7 @@ public class BolElectronica {
 //            javax.activation.FileDataSource fileDataSource = new javax.activation.FileDataSource(path + zipFileName);
 //            javax.activation.DataHandler dataHandler = new javax.activation.DataHandler(fileDataSource);
             //================Grabando la respuesta de sunat en archivo ZIP solo si es nulo
-            String pathRecepcion = "d:\\libre\\";
+            String pathRecepcion = "d:\\envio\\";
             FileOutputStream fos = new FileOutputStream(pathRecepcion + "R-" + zipFileName);
             fos.write(respuestaSunat);
             fos.close();
@@ -166,7 +166,8 @@ public class BolElectronica {
             System.out.println("==>El envio del Zip a sunat fue exitoso");
             log.info("enviarASunat - Envio a Sunat Exitoso ");
         } catch (javax.xml.ws.soap.SOAPFaultException ex) {
-            log.error("enviarASunat - Error " + ex.toString());
+            System.out.println(ex.toString());
+            //log.error("enviarASunat - Error " + ex.toString());
         } catch (Exception e) {
             e.printStackTrace();
             log.error("enviarASunat - Error " + e.toString());
@@ -181,7 +182,7 @@ public class BolElectronica {
             //Parametros del keystore
            
             String keystoreType = "JKS";
-            String keystoreFile = "d:\\libre\\MiAlmacen.jks";
+            String keystoreFile = "d:\\envio\\MiAlmacen.jks";
             String keystorePass = "miAlmacen";
             String privateKeyAlias = "miAlmacen";
             String privateKeyPass = "miAlmacen";

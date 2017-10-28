@@ -34,6 +34,7 @@ public class GenFactura {
         items.setEmpr_departamento("Lima");
         items.setEmpr_ubigeo("150128");
         items.setEmpr_pais("PE");
+        items.setDocu_enviaws("S");
         
         // Cliente o receptor 
         items.setClie_tipodoc("1"); // Sin docu. "-" solo se usa DNI = "1"// anexo de catalogos
@@ -43,7 +44,7 @@ public class GenFactura {
         //documento
         // Cabecera
         items.setDocu_tipodocumento("03"); // anexo de catalogos 03 refiere a Boleta de Venta Electronica
-        items.setDocu_numero("BB01-45"); 
+        items.setDocu_numero("BB01-192"); 
         items.setDocu_fecha("2017-10-28"); // formato segun sunat
         items.setDocu_gravada("18757.46");
         items.setDocu_igv("3376.34");
@@ -70,6 +71,8 @@ public class GenFactura {
         detdoc.setItem_pventa("25.00");
         detdoc.setItem_ti_subtotal("250.00");
         detdoc.setItem_pventa_no_onerosa("0.00");
+        detdoc.setItem_ti_igv("5.20");
+        detdoc.setItem_afectacion("10");
                 
         detdocelec.add(detdoc);
         
@@ -84,6 +87,8 @@ public class GenFactura {
         detdoc.setItem_pventa("50.00");
         detdoc.setItem_ti_subtotal("600.00");
         detdoc.setItem_pventa_no_onerosa("0.00");
+        detdoc.setItem_ti_igv("5.32");
+        detdoc.setItem_afectacion("10");
         
         detdocelec.add(detdoc);
 

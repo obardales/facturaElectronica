@@ -36,7 +36,7 @@ public class HeaderHandler implements SOAPHandler<SOAPMessageContext> {
                 SOAPElement username = usernameToken.addChildElement("Username", "wsse");
 
                 //username.addTextNode("20550948029MODDATOS");
-                username.addTextNode("20601491193MODDATOS");
+                username.addTextNode("20380456444MODDATOS");
 
                 SOAPElement password = usernameToken.addChildElement("Password", "wsse");
                 //password.setAttribute("Type", "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText");
