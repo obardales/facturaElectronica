@@ -3,15 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/obardales/Downloads/facturaElectronica-master/genFactura/src/com/org/model/beans/Leyenda.java</file>
-            <file>file:/C:/Users/obardales/Downloads/facturaElectronica-master/genFactura/src/com/org/util/GeneralFunctions.java</file>
-            <file>file:/C:/Users/obardales/Downloads/facturaElectronica-master/genFactura/src/com/org/util/HeaderHandler.java</file>
-            <file>file:/C:/Users/obardales/Downloads/facturaElectronica-master/genFactura/src/com/org/factories/Util.java</file>
-            <file>file:/C:/Users/obardales/Downloads/facturaElectronica-master/genFactura/src/com/org/model/beans/DocumentodetBean.java</file>
-            <file>file:/C:/Users/obardales/Downloads/facturaElectronica-master/genFactura/src/com/org/util/HeaderHandlerResolver.java</file>
-            <file>file:/C:/Users/obardales/Downloads/facturaElectronica-master/genFactura/src/com/org/model/beans/DocumentoCabBean.java</file>
-            <file>file:/C:/Users/obardales/Downloads/facturaElectronica-master/genFactura/src/com/org/ws/BolElectronica.java</file>
-            <file>file:/C:/Users/obardales/Downloads/facturaElectronica-master/genFactura/src/genfactura/GenFactura.java</file>
+            <file>file:/D:/desarrollo/imperio/facturaElectronica/genFactura/src/com/org/model/beans/DocumentodetBean.java</file>
+            <file>file:/D:/desarrollo/imperio/facturaElectronica/genFactura/src/com/org/model/beans/DocumentoCabBean.java</file>
+            <file>file:/D:/desarrollo/imperio/facturaElectronica/genFactura/src/genfactura/GenFactura.java</file>
         </group>
     </open-files>
 </project-private>

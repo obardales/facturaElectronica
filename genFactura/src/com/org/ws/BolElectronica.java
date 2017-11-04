@@ -4,6 +4,7 @@ import com.org.factories.Util;
 import com.org.model.beans.DocumentoCabBean;
 import com.org.model.beans.DocumentodetBean;
 import com.org.model.beans.Leyenda;
+import com.org.model.despatchers.DElectronicoDespachador;
 import com.org.util.GeneralFunctions;
 import com.org.util.HeaderHandlerResolver;
 import com.org.util.LecturaXML;
@@ -18,6 +19,7 @@ import java.security.KeyStore;
 import java.security.PrivateKey;
 
 import java.security.cert.X509Certificate;
+import java.sql.Connection;
 import java.util.Enumeration;
 import java.util.List;
 import java.util.zip.ZipEntry;
@@ -40,14 +42,18 @@ public class BolElectronica {
 
     private static Log log = LogFactory.getLog(BolElectronica.class);
 
-    public static String generarXMLZipiadoBoleta(DocumentoCabBean items, List<DocumentodetBean> detdocelec, List<Leyenda> leyendas) {
+    public static String generarXMLZipiadoBoleta(String iddocument, Connection conn) { 
         log.info("generarXMLZipiadoBoleta - Inicializamos el ambiente");
         org.apache.xml.security.Init.init();
         String resultado = "";
-
+        String nrodoc = iddocument;//"943270";// request.getParameter("nrodoc");68
         String unidadEnvio; // = Util.getPathZipFilesEnvio();
         String pathXMLFile;
         try {
+            DocumentoCabBean items = DElectronicoDespachador.cargarDocElectronico(nrodoc, conn);
+            List<DocumentodetBean> detdocelec = DElectronicoDespachador.cargarDetDocElectronico(nrodoc, conn);
+            List<Leyenda> leyendas = DElectronicoDespachador.cargarDetDocElectronicoLeyenda(nrodoc, conn);
+
             //String nrodoc = iddocument;//"943317";// request.getParameter("nrodoc");
             log.info("generarXMLZipiadoBoleta - Extraemos datos para preparar XML ");
              unidadEnvio = "d:\\envio\\";
