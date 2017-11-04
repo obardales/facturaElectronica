@@ -137,9 +137,9 @@ public class DElectronicoDespachador {
             sql += " ITEM_DESCRIPCION,";
             sql += " ITEM_AFECTACION,";
             sql += " ITEM_PVENTA, ";
-            sql += " item_pventa_nohonerosa,";
-            sql += " ITEM_TI_SUBTOTAL,";
-            sql += " ITEM_TI_IGV ";
+            sql += " item_pventa_no_onerosa,";
+            sql += " ITEM_TO_SUBTOTAL,";
+            sql += " ITEM_TO_IGV ";
 
             sql += " FROM detalle";
             sql += " WHERE DOCU_CODIGO = ?";
@@ -157,8 +157,8 @@ public class DElectronicoDespachador {
                 cdetalle.setItem_afectacion(rs.getString("item_afectacion"));
                 cdetalle.setItem_pventa(rs.getString("item_pventa"));
                 cdetalle.setItem_pventa_no_onerosa(rs.getString("item_pventa_no_onerosa"));
-                cdetalle.setItem_ti_subtotal(rs.getString("item_ti_subtotal"));
-                cdetalle.setItem_ti_igv(rs.getString("item_ti_igv"));
+                cdetalle.setItem_ti_subtotal(rs.getString("item_to_subtotal"));
+                cdetalle.setItem_ti_igv(rs.getString("item_to_igv"));
 
                 detalle.add(cdetalle);
             }

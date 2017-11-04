@@ -622,7 +622,7 @@ public class BolElectronica {
                 InvoicedQuantity.appendChild(doc.createTextNode(listaDet.getItem_cantidad().trim()));
 
                 Element LineExtensionAmount1 = doc.createElementNS("", "cbc:LineExtensionAmount");
-                LineExtensionAmount1.setAttributeNS(null, "currencyID", listaDet.getItem_moneda().trim());
+                LineExtensionAmount1.setAttributeNS(null, "currencyID", items.getDocu_moneda().trim());
                 LineExtensionAmount1.setIdAttributeNS(null, "currencyID", true);
 
                 InvoiceLine.appendChild(LineExtensionAmount1);//se anade al grupo InvoiceLine
@@ -637,7 +637,7 @@ public class BolElectronica {
                 AlternativeConditionPrice.appendChild(doc.createTextNode("\n"));
 
                 Element PriceAmount = doc.createElementNS("", "cbc:PriceAmount");
-                PriceAmount.setAttributeNS(null, "currencyID", listaDet.getItem_moneda().trim());
+                PriceAmount.setAttributeNS(null, "currencyID", items.getDocu_moneda().trim());
                 PriceAmount.setIdAttributeNS(null, "currencyID", true);
                 AlternativeConditionPrice.appendChild(PriceAmount);//se anade al grupo AlternativeConditionPrice
                 PriceAmount.appendChild(doc.createTextNode(listaDet.getItem_pventa().trim()));
@@ -653,7 +653,7 @@ public class BolElectronica {
                     AlternativeConditionPrice02.appendChild(doc.createTextNode("\n"));
 
                     Element PriceAmount02 = doc.createElementNS("", "cbc:PriceAmount");
-                    PriceAmount02.setAttributeNS(null, "currencyID", listaDet.getItem_moneda().trim());
+                    PriceAmount02.setAttributeNS(null, "currencyID", items.getDocu_moneda().trim());
                     PriceAmount02.setIdAttributeNS(null, "currencyID", true);
                     AlternativeConditionPrice02.appendChild(PriceAmount02);//se anade al grupo AlternativeConditionPrice
                     PriceAmount02.appendChild(doc.createTextNode(listaDet.getItem_pventa_no_onerosa().trim()));
@@ -669,7 +669,7 @@ public class BolElectronica {
                 TaxTotal1.appendChild(doc.createTextNode("\n"));
 
                 Element TaxAmount2 = doc.createElementNS("", "cbc:TaxAmount");
-                TaxAmount2.setAttributeNS(null, "currencyID", listaDet.getItem_moneda().trim());
+                TaxAmount2.setAttributeNS(null, "currencyID", items.getDocu_moneda().trim());
                 TaxAmount2.setIdAttributeNS(null, "currencyID", true);
                 TaxTotal1.appendChild(TaxAmount2);//se anade al grupo TaxTotal1
                 TaxAmount2.appendChild(doc.createTextNode(listaDet.getItem_ti_igv().trim()));
@@ -679,14 +679,14 @@ public class BolElectronica {
                 TaxSubtotal1.appendChild(doc.createTextNode("\n"));
 
                 Element TaxableAmount = doc.createElementNS("", "cbc:TaxableAmount");
-                TaxableAmount.setAttributeNS(null, "currencyID", listaDet.getItem_moneda().trim());
+                TaxableAmount.setAttributeNS(null, "currencyID", items.getDocu_moneda().trim());
                 TaxableAmount.setIdAttributeNS(null, "currencyID", true);
 
                 TaxSubtotal1.appendChild(TaxableAmount);//se anade al grupo TaxSubtotal1
                 TaxableAmount.appendChild(doc.createTextNode(listaDet.getItem_ti_igv().trim()));
 
                 Element TaxAmount3 = doc.createElementNS("", "cbc:TaxAmount");
-                TaxAmount3.setAttributeNS(null, "currencyID", listaDet.getItem_moneda().trim()); //================>errror estaba con item..getItem_moneda()
+                TaxAmount3.setAttributeNS(null, "currencyID", items.getDocu_moneda().trim()); //================>errror estaba con item..getItem_moneda()
                 TaxAmount3.setIdAttributeNS(null, "currencyID", true);
                 TaxSubtotal1.appendChild(TaxAmount3);//se anade al grupo TaxSubtotal1
                 TaxAmount3.appendChild(doc.createTextNode(listaDet.getItem_ti_igv().trim()));
@@ -749,7 +749,7 @@ public class BolElectronica {
                 Price.appendChild(doc.createTextNode("\n"));
 
                 Element PriceAmount2 = doc.createElementNS("", "cbc:PriceAmount");
-                PriceAmount2.setAttributeNS(null, "currencyID", listaDet.getItem_moneda().trim());
+                PriceAmount2.setAttributeNS(null, "currencyID", items.getDocu_moneda().trim());
                 PriceAmount2.setIdAttributeNS(null, "currencyID", true);
                 Price.appendChild(PriceAmount2);//se anade al grupo Price
                 PriceAmount2.appendChild(doc.createTextNode(listaDet.getItem_pventa().trim()));
