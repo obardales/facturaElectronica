@@ -42,9 +42,15 @@ public class DocumentoCabBean {
     private String tasa_isc;
 
     private String docu_otrostributos;
+    private String tasa_otrostributos;
     private String docu_otroscargos;
     private String docu_enviaws;
+    private String clie_correo_cpe1;
+    private String clie_correo_cpe2;
 
+    // control id de app externo
+    private String idExterno;
+    
     public String getDocu_codigo() {
         return docu_codigo;
     }
@@ -298,6 +304,38 @@ public class DocumentoCabBean {
 
     public void setDocu_enviaws(String docu_enviaws) {
         this.docu_enviaws = docu_enviaws;
+    }
+
+    public String getTasa_otrostributos() {
+        return tasa_otrostributos;
+    }
+
+    public void setTasa_otrostributos(String tasa_otrostributos) {
+        this.tasa_otrostributos = tasa_otrostributos;
+    }
+
+    public String getClie_correo_cpe1() {
+        return clie_correo_cpe1;
+    }
+
+    public void setClie_correo_cpe1(String clie_correo_cpe1) {
+        this.clie_correo_cpe1 = clie_correo_cpe1;
+    }
+
+    public String getClie_correo_cpe2() {
+        return clie_correo_cpe2;
+    }
+
+    public void setClie_correo_cpe2(String clie_correo_cpe2) {
+        this.clie_correo_cpe2 = clie_correo_cpe2;
+    }
+
+    public String getIdExterno() {
+        return idExterno;
+    }
+
+    public void setIdExterno(String idExterno) {
+        this.idExterno = idExterno;
     }
 
 }
